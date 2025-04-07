@@ -101,3 +101,88 @@ clj꞉todo-clj.core꞉> 
 ; 2025-04-07 22:34:20.082:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started ServerConnector@662d9f79{HTTP/1.1}{0.0.0.0:3000}
 ; 2025-04-07 22:34:20.082:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started @158235ms
 clj꞉todo-clj.core꞉> 
+#'todo-clj.core/handler
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/restart-server
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/start-server
+clj꞉todo-clj.core꞉> 
+(restart-server)
+#object[org.eclipse.jetty.server.Server 0x31ac39c2 "org.eclipse.jetty.server.Server@31ac39c2"]
+; 
+; 2025-04-07 22:39:28.159:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Stopped ServerConnector@662d9f79{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:39:28.159:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: jetty-9.2.10.v20150310
+; 2025-04-07 22:39:28.161:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started ServerConnector@2a3c31de{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:39:28.161:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started @466313ms
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/start-server
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/restart-server
+clj꞉todo-clj.core꞉> 
+; Syntax error compiling at (src/todo_clj/core.clj:0:0).
+; No such namespace: World!<
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/handler
+clj꞉todo-clj.core꞉> 
+(restart-server)
+#object[org.eclipse.jetty.server.Server 0x42c7b5a5 "org.eclipse.jetty.server.Server@42c7b5a5"]
+; 
+; 2025-04-07 22:41:10.184:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Stopped ServerConnector@2a3c31de{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:41:10.184:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: jetty-9.2.10.v20150310
+; 2025-04-07 22:41:10.185:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started ServerConnector@4f287a62{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:41:10.185:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started @568338ms
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/handler
+clj꞉todo-clj.core꞉> 
+(restart-server)
+#object[org.eclipse.jetty.server.Server 0x74741632 "org.eclipse.jetty.server.Server@74741632"]
+; 
+; 2025-04-07 22:41:33.298:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Stopped ServerConnector@4f287a62{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:41:33.299:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: jetty-9.2.10.v20150310
+; 2025-04-07 22:41:33.300:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started ServerConnector@56ef8742{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:41:33.300:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started @591453ms
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/home-view
+clj꞉todo-clj.core꞉> 
+; Evaluating file: core.clj
+; 
+; Syntax error macroexpanding clojure.core/defn at (src/todo_clj/core.clj:15:1).
+; {:title "朝ご飯を作る"} - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; ({:title "朝ご飯を作る"} {:title "燃えるゴミを出す"} {:title "卵を買って帰る"} {:title "お風呂を洗う"}) - failed: Extra input at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉todo-clj.core꞉> 
+; Evaluating file: core.clj
+#'todo-clj.core/restart-server
+clj꞉todo-clj.core꞉> 
+(home {})
+{:status 200,
+ :body "<h1>ホーム画面</h1>\n   <a href=\"/todo\"> TODO 一覧</a>",
+ :headers {"Content-Type" "text/html; charset=utf-8"}}
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/match-route
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/not-found
+clj꞉todo-clj.core꞉> 
+#'todo-clj.core/handler
+clj꞉todo-clj.core꞉> 
+(handler {})
+{:status 404, :body "<h1>404 Not Found</h1>"}
+clj꞉todo-clj.core꞉> 
+{:status 200,
+ :body "<h1>ホーム画面</h1>\n   <a href=\"/todo\"> TODO 一覧</a>",
+ :headers {"Content-Type" "text/html; charset=utf-8"}}
+(handler {:uri "/"})
+clj꞉todo-clj.core꞉> 
+(handler {:uri "/todo"})
+{:status 200,
+ :body ("<h1>TODO 一覧</h1>" "<ul>" "<li>朝ご飯を作る</li>" "<li>燃えるゴミを出す</li>" "<li>卵を買って帰る</li>" "<li>お風呂を洗う</li>" "</ul>"),
+ :headers {"Content-Type" "text/html; charset=utf-8"}}
+clj꞉todo-clj.core꞉> 
+(restart-server)
+#object[org.eclipse.jetty.server.Server 0xb2bdb58 "org.eclipse.jetty.server.Server@b2bdb58"]
+; 
+; 2025-04-07 22:57:38.202:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Stopped ServerConnector@56ef8742{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:57:38.203:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: jetty-9.2.10.v20150310
+; 2025-04-07 22:57:38.203:INFO:oejs.ServerConnector:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started ServerConnector@5c626d6f{HTTP/1.1}{0.0.0.0:3000}
+; 2025-04-07 22:57:38.203:INFO:oejs.Server:nREPL-session-93ecb872-1069-4b6f-b1d0-4ac68d71a216: Started @1556356ms
+clj꞉todo-clj.core꞉> 
